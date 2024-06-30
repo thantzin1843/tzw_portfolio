@@ -1,0 +1,27 @@
+.heroContainer{
+    height: calc(100vh - 80px);
+    border:1px solid var(--textColor);
+    position: relative;
+}
+
+.btn{
+    transition: all 0.5s ease;
+    border:1px solid var(--textColor);
+}
+.btn:hover{
+    box-shadow: 8px 8px 0px black;
+}
+
+.textshadow{
+    text-shadow: 2px 2px 0px var(--softBg);
+}
+
+.link{
+    color:var(--textColor);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.link:hover{
+    scale: 1.2;
+}

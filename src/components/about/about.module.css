@@ -1,0 +1,29 @@
+.bordera{
+    border:1px solid var(--textColor)
+}
+
+.bordersa{
+    border-left:2px solid var(--textColor);
+    background-color:var(--textColor)
+}
+
+.shadow{
+    box-shadow: 15px 15px 0 var(--softTextColor);
+}
+
+.shadowimg{
+    box-shadow: 15px 15px 0 var(--softTextColor);
+}
+
+.shadowwithborder{
+    box-shadow:10px 10px 0px var(--textColor)
+}
+
+.container{
+    background-color: var(--bg);
+    color:var(--textColor);
+}
+
+.textshadow{
+    text-shadow:1px 1px 0px var(--textColor);
+}

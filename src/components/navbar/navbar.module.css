@@ -1,0 +1,21 @@
+.menubar{
+    width: 50px;
+    height: 3px;
+    background-color: var(--textColor);
+    border-radius: 50%;
+}
+
+.resmenu{
+    background-color:var(--bg);
+    height: calc(100vh - 75px);
+    position:absolute;
+    top: 75px;
+    width: 100%;
+    z-index: 300;
+}
+
+.active{
+    padding: 2px 5px;
+    border:1px solid var(--textColor);
+    box-shadow:3px 3px 0px var(--textColor);
+}

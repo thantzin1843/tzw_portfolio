@@ -1,0 +1,11 @@
+.skill{
+    border: 1px solid var(--textColor);
+    padding: 10px;
+}
+
+.range{
+    height: 4px;
+    width:100%;
+    background-color: var(--textColor);
+    margin-top: 15px;
+}
