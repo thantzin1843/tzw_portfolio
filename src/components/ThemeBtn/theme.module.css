@@ -1,0 +1,15 @@
+.themeCon{
+    background-color:var(--textColor);
+    border:2px solid var(--textColor);
+    padding:1px;
+    position:relative;
+    width:70px;
+}
+.ball{
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    background-color:var(--bg);
+    position:absolute;
+
+}

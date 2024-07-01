@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/providers/ThemeProvider";
+import ThemeContextProvider from "@/context/ThemeContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body>
+        <ThemeContextProvider>
         <ThemeProvider>
           <div className="wcontainer">
             <div className="wrapper sm:w-full md:w-5/6 mx-auto p-3">
@@ -21,6 +23,7 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </ThemeProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );

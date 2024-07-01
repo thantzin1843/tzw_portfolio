@@ -1,8 +1,12 @@
-import React from 'react'
+'use client'
+import { ThemeContext } from '@/context/ThemeContext';
+import React, { useContext } from 'react'
 
 function ThemeProvider({children}) {
+  const {theme} = useContext(ThemeContext);
+  // console.log(theme);
   return (
-    <div className='light'>
+    <div className={`${theme}`}>
         {children}
     </div>
   )

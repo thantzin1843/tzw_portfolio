@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { FaHtml5 } from "react-icons/fa";
+import { FaBootstrap, FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaLaravel } from "react-icons/fa";
@@ -10,24 +10,17 @@ import { RiNextjsFill } from "react-icons/ri";
 import styles from './skill.module.css'
 import { FaNodeJs } from "react-icons/fa";
 import { FaPhp } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
+import { SiExpress, SiTailwindcss } from "react-icons/si";
 import { SiSpring } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiMysql } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 function Skill() {
   return (
-   <div>
+   <div className='' id='skills'>
       <div className='text-3xl font-extrabold mt-[50px] drop-shadow-xl justify-center flex mb-5'><BsStars size={35} /> &nbsp;My Skills</div>
      <div className=' flex flex-wrap'>
-        {/* <FaHtml5 size={35}/>
-                <FaCss3Alt size={35} />
-                <IoLogoJavascript size={35}/>
-                <FaLaravel size={35}/>
-                <FaHtml5 size={35}/>
-                <FaCss3Alt size={35}/>
-                <IoLogoJavascript size={35}/>
-                <FaLaravel size={35}/> */}
+
         
         <div className='sm:w-full md:w-1/3 p-5'>
             <div className="font-extrathin text-xl">Frontend Technologies</div>
@@ -43,6 +36,26 @@ function Skill() {
 
             <div className={`${styles.skill} shadow-xl mt-5`}>
             <div className='flex items-center'><FaCss3Alt size={35} />&nbsp;CSS</div>
+            <div className="flex justify-center items-center">
+            <span className='text-sm'>83%</span>
+            <div className={`${styles.range}`}>
+                <div className='w-5/6 h-full bg-orange-400'></div>
+            </div>
+            </div>
+            </div>
+
+            <div className={`${styles.skill} shadow-xl mt-5`}>
+            <div className='flex items-center'><SiTailwindcss size={35}/> &nbsp;Tailwind CSS</div>
+            <div className="flex justify-center items-center">
+            <span className='text-sm'>83%</span>
+            <div className={`${styles.range}`}>
+                <div className='w-5/6 h-full bg-orange-400'></div>
+            </div>
+            </div>
+            </div>
+
+            <div className={`${styles.skill} shadow-xl mt-5`}>
+            <div className='flex items-center'><FaBootstrap size={35}/> &nbsp;Bootstrap</div>
             <div className="flex justify-center items-center">
             <span className='text-sm'>83%</span>
             <div className={`${styles.range}`}>

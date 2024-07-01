@@ -4,22 +4,31 @@ import styles from './hero.module.css'
 import { FaArrowAltCircleDown, FaArrowDown, FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { BiSolidDownArrowCircle } from "react-icons/bi";
 import { BsStars } from "react-icons/bs";
+import { CgMail } from "react-icons/cg";
+import Link from 'next/link';
+import { motion, useScroll } from "framer-motion"
 function Hero() {
   return (
-    <div className={`${styles.heroContainer} relative flex flex-col justify-center items-center ` }>
+    <div id='home' className={`${styles.heroContainer} relative flex flex-col justify-center items-center ` }>
       <div className='absolute top-5 left-10 flex gap-10'>
-      <FaGithub className={styles.link} size={30}/>
-      <FaFacebook className={styles.link} size={30}/>
-      <FaLinkedin  className={styles.link} size={30}/>
+      <Link href='https://github.com/thantzin1843'><FaGithub className={styles.link} size={30}/></Link>
+      <Link href='mailto:thantzinwin1843@gmail.com'><CgMail className={styles.link} size={30}/></Link>
+      <Link href='https://www.linkedin.com/in/thant-zin-win-5570a5242/'><FaLinkedin  className={styles.link} size={30}/></Link>
       </div>
-      <div>My name is </div>
+      <motion.div
+      variants={{hidden:{opacity:0,x:175},visible:{opacity:1,x:0}}}
+      transition={{ duration: 1.5, type: "tween" }}
+       initial="hidden"
+  whileInView="visible"
+      className='relative overflow-hidden'
+      >My name is </motion.div>
       <div className={`text-5xl mb-5 ${styles.textshadow} text-center`}>Thant Zin Win</div>
       
       <div className={`mt-5 `}>I'm </div>
-      <div className={`text-5xl ${styles.textshadow} flex text-center`}><BsStars size={35} />a Software Engineer</div>
-      <div className='text-center absolute bottom-10 hover:scale-110 hover:bottom-8 transition-all duration-150 ease-in'>
+      <div className={`text-5xl ${styles.textshadow} text-center`}><BsStars size={35} className='inline'/>a Software Engineer</div>
+      <Link href="#aboutPage" className='text-center absolute bottom-10 hover:scale-110 hover:bottom-8 transition-all duration-150 ease-in'>
          <BiSolidDownArrowCircle size={30} className=''/>
-      </div>
+      </Link>
     </div>
   )
 }
