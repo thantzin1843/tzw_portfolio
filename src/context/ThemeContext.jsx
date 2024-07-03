@@ -6,10 +6,10 @@ export const ThemeContext = createContext();
 
 export default function ThemeContextProvider ({children}) {
     const getTheme = () =>{
-        if(typeof window != 'undefined'){
-            return localStorage.getItem('theme');
+        if(typeof window !== 'undefined'){
+            return localStorage.getItem('theme') || 'light';
         }
-        return 'light';
+        
     }
     const [theme,setTheme] = useState(()=>{
         return getTheme();

@@ -14,7 +14,7 @@ module.exports = {
       },
       screens: {
         // Customize as per your needs
-        sm: '430px',  // Example customization
+        sm: '360px',  // Example customization
         md: '968px',  // Example customization
       },
     },

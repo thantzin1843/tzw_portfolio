@@ -15,14 +15,23 @@ import { SiSpring } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiMysql } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
+import {motion} from 'framer-motion'
 function Skill() {
   return (
    <div className='' id='skills'>
       <div className='text-3xl font-extrabold mt-[50px] drop-shadow-xl justify-center flex mb-5'><BsStars size={35} /> &nbsp;My Skills</div>
-     <div className=' flex flex-wrap'>
+     <div className=' flex flex-wrap overflow-hidden'>
 
         
-        <div className='sm:w-full md:w-1/3 p-5'>
+        <motion.div 
+        variants={{
+            hidden:{opacity:0,x:-100},
+            visible:{opacity:1,x:0}
+        }}
+        transition={{ duration: 0.5 }}
+         initial="hidden"
+          whileInView="visible"
+        className='sm:w-full md:w-1/3 p-5 ' >
             <div className="font-extrathin text-xl">Frontend Technologies</div>
             <div className={`${styles.skill} shadow-xl mt-5`}>
             <div className='flex  items-center'><FaHtml5 size={35}/>&nbsp;HTML</div>
@@ -94,9 +103,17 @@ function Skill() {
             </div>
             </div>
             
-        </div>
+        </motion.div>
         
-        <div className='sm:w-full md:w-1/3 p-5'>
+        <motion.div 
+        variants={{
+            hidden:{opacity:0,y:50},
+            visible:{opacity:1,y:0}
+        }}
+        transition={{ duration: 0.5 }}
+         initial="hidden"
+          whileInView="visible"
+        className='sm:w-full md:w-1/3 p-5'>
             <div className="font-extrathin text-xl">Backend Technologies</div>
             <div className={`${styles.skill} shadow-xl mt-5`}>
             <div className='flex  items-center'><FaPhp size={35} />&nbsp;PHP</div>
@@ -148,9 +165,15 @@ function Skill() {
             </div>
             </div>
             
-        </div>
+        </motion.div>
 
-        <div className='sm:w-full md:w-1/3 p-5'>
+        <motion.div className='sm:w-full md:w-1/3 p-5' variants={{
+            hidden:{opacity:0,x:50},
+            visible:{opacity:1,x:0}
+        }}
+        transition={{ duration: 0.5 }}
+         initial="hidden"
+          whileInView="visible">
             <div className="font-extrathin text-xl">Other Technologies</div>
             <div className={`${styles.skill} shadow-xl mt-5`}>
             <div className='flex  items-center'><FaGithub size={35}/>&nbsp;Github</div>
@@ -182,7 +205,7 @@ function Skill() {
             </div>
             </div>
             
-        </div>
+        </motion.div>
     </div>
    </div>
   )

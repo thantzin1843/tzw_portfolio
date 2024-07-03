@@ -15,12 +15,14 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
+  scroll-behavior: smooth;
 }
 
 body{
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: bold;
+  scroll-behavior: smooth;
 }
 
 a{

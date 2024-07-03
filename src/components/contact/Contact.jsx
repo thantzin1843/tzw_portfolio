@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import styles from './contact.module.css'
 import { IoIosSend } from "react-icons/io";
@@ -6,13 +7,23 @@ import { FaArrowAltCircleDown, FaArrowDown, FaFacebook, FaGithub, FaLinkedin } f
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlinePhone } from "react-icons/md";
 import Link from 'next/link';
-
+import {motion} from 'framer-motion'
 function Contact() {
   return (
     <div className='mt-[50px]' id='contact'>
-            <div className='flex flex-wrap w-full'>
-                <div className='md:w-2/3 sm:w-full pe-5'>
-                <div className='text-3xl font-bold text-center '>Contact Me</div>
+            <div className='flex flex-wrap w-full overflow-hidden'>
+                <motion.div className='md:w-2/3 sm:w-full pe-5' 
+                 variants={{
+                  hidden:{opacity:0,x:-50},
+                  visible:{opacity:1,x:0}
+              }}
+              transition={{ duration: 0.5 }}
+               initial="hidden"
+                whileInView="visible"
+                >
+                <div  className='text-3xl font-bold text-center '
+               
+                >Contact Me</div>
                 <form action="" className='w-full p-2 my-5'>
                     <input type="text" placeholder="Name" className={`${styles.border} w-full   outline-none p-3 bg-gray-600/0 shadow-lg`} />
                     <input type="email" placeholder="Email" className={`${styles.border} w-full mt-3  outline-none p-3 bg-gray-600/0`} />
@@ -22,9 +33,17 @@ function Contact() {
                     <button className={`py-5 px-20 ${styles.border} mx-auto ${styles.sendbtn} flex items-center` }>Send Message&nbsp;<IoIosSend size={35}/></button>
                     </div>
                 </form>
-                </div>
+                </motion.div>
 
-                <div className='md:w-1/3 sm:w-full '>
+                <motion.div className='md:w-1/3 sm:w-full ' 
+                 variants={{
+                  hidden:{opacity:0,x:50},
+                  visible:{opacity:1,x:0}
+              }}
+              transition={{ duration: 0.5 }}
+               initial="hidden"
+                whileInView="visible"
+                >
                     <div className='text-3xl font-bold '>Contact Infos</div>
                     <div className='mt-5'>
                     <CgMail size={35} className='inline'/> &nbsp; <Link href='mailto:thantzinwin1843@gmail.com'>thantzinwin1843@gmail.com</Link>
@@ -41,7 +60,7 @@ function Contact() {
                     <div className='mt-5'>
                     <CiLocationOn   size={35} className='inline'/> &nbsp; Yangon, Myanmar
                     </div>
-                </div>
+                </motion.div>
             </div>
     </div>
   )
