@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <div className='relative'>
         <div className='w-full  h-[75px] items-center flex justify-between'>
-        <div>Logo</div>
+        <div className='text-xl text-white bg-black font-bold flex border border-orange-500'><div className='bg-black p-2' style={{boxShadow:'-6px -6px 0px orange'}}>TZ</div><div className='p-2' style={{boxShadow:'6px 6px 0px orange'}}>W</div></div>
         <div className='sm:hidden md:flex gap-10'>
             <Link href="#home" onClick={()=>setPath('/')} className={path=='/' && styles.active}>Home</Link>
             <Link href="#aboutPage" onClick={()=>setPath('/about')} className={path=='/about' && styles.active}>About</Link>
@@ -34,11 +34,11 @@ function Navbar() {
             {
                 show && 
                 <div className={`${styles.resmenu} flex bg-amber-300! flex-col justify-center items-center gap-10`}>
-                        <Link href="/" className={styles.active}>Home</Link>
-                        <Link href="/">About</Link>
-                        <Link href="/">Projects</Link>
-                        <Link href="/">Skills</Link>
-                        <Link href="/">Contact</Link>
+                        <Link href="#home" onClick={()=>setPath('/')} className={path=='/' && styles.active}>Home</Link>
+                        <Link href="#aboutPage" onClick={()=>setPath('/about')} className={path=='/about' && styles.active}>About</Link>
+                        <Link href="#projects" onClick={()=>setPath('/projects')} className={path=='/projects' && styles.active}>Projects</Link>
+                        <Link href="#skills" onClick={()=>setPath('/skills')} className={path=='/skills' && styles.active}>Skills</Link>
+                        <Link href="#contact" onClick={()=>setPath('/contact')} className={path=='/contact' && styles.active}>Contact</Link>
                 </div>
             }
     </div>

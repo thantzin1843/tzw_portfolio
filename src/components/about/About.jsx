@@ -18,7 +18,7 @@ function About() {
         whileInView="visible"
 
       className='md:w-1/2 sm:w-full h-auto p-5 flex flex-col justify-center items-center border '>
-        <img src='/p2.jpg' className={`md:w-2/3 md:h-auto sm:w-1/3 sm:h-auto ${styles.shadowimg}`} />
+        <img src='/p2.jpg' className={`md:w-2/3 md:h-auto sm:w-full sm:h-auto ${styles.shadowimg}`} />
       </motion.div>
 
       
