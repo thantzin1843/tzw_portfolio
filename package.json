@@ -12,6 +12,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "framer-motion": "^11.2.12",
+    "mongoose": "^8.4.4",
     "next": "14.2.4",
     "react": "^18",
     "react-circle-progress-bar": "^0.1.4",
