@@ -1,10 +1,12 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './about.module.css'
 import Image from 'next/image'
 import Opacity from '../animation/Opacity'
 import {motion} from 'framer-motion'
+import { getMessages } from '@/utils/actions'
 function About() {
+
   return (
     <div className='md:flex wrap min-h-lvh mt-[50px] overflow-hidden' id='aboutPage'>
 
