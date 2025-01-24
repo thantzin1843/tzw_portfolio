@@ -29,7 +29,7 @@ function Hero() {
       <div className={`text-5xl ${styles.textshadow} text-center`}><BsStars size={35} className='inline'/>a Software Engineer</div>
       </Opacity>
       
-      <Link href="#aboutPage" className='text-center absolute bottom-10 hover:scale-110 hover:bottom-8 transition-all duration-150 ease-in'>
+      <Link href="#about" className='text-center absolute bottom-10 hover:scale-110 hover:bottom-8 transition-all duration-150 ease-in'>
          <BiSolidDownArrowCircle size={30} className=''/>
       </Link>
     </div>

@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 import React from 'react'
 import styles from './contact.module.css'
 
@@ -7,13 +7,13 @@ import { FaArrowAltCircleDown, FaArrowDown, FaFacebook, FaGithub, FaLinkedin } f
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlinePhone } from "react-icons/md";
 import Link from 'next/link';
-import {motion} from 'framer-motion'
+// import {motion} from 'framer-motion'
 import Form from './Form';
 function Contact() {
   return (
     <div className='mt-[50px]' id='contact'>
             <div className='flex flex-wrap w-full overflow-hidden'>
-                <motion.div className='md:w-2/3 sm:w-full pe-5' 
+                <div className='md:w-2/3 sm:w-full pe-5' 
                  variants={{
                   hidden:{opacity:0,x:-50},
                   visible:{opacity:1,x:0}
@@ -26,9 +26,9 @@ function Contact() {
                
                 >Contact Me</div>
                 <Form/>
-                </motion.div>
+                </div>
 
-                <motion.div className='md:w-1/3 sm:w-full ' 
+                <div className='md:w-1/3 sm:w-full ' 
                  variants={{
                   hidden:{opacity:0,x:50},
                   visible:{opacity:1,x:0}
@@ -53,7 +53,7 @@ function Contact() {
                     <div className='mt-5'>
                     <CiLocationOn   size={35} className='inline'/> &nbsp; Yangon, Myanmar
                     </div>
-                </motion.div>
+                </div>
             </div>
     </div>
   )
