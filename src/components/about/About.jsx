@@ -8,7 +8,7 @@ import { getMessages } from '@/utils/actions'
 function About() {
 
   return (
-    <div className='md:flex wrap min-h-lvh mt-[50px] overflow-hidden' id='aboutPage'>
+    <div className='md:flex wrap min-h-lvh mt-[50px] overflow-hidden' id='about'>
 
       <motion.div 
         variants={{

@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/providers/ThemeProvider";
 import ThemeContextProvider from "@/context/ThemeContext";
-
+import Navbar from "@/components/navbar/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider>
           <div className="wcontainer">
             <div className="wrapper sm:w-full md:w-5/6 mx-auto p-3">
+            <Navbar/>
             {children}
             </div>
           </div>
