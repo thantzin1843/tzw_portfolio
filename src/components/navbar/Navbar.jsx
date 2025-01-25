@@ -11,7 +11,7 @@ function Navbar() {
     const [path,setPath] = useState('/')
     const handleHashNavigation = (hash) => {
         setPath(`/${hash}`)
-        router.push('http://localhost:3000/#'+hash)
+        router.push('https://tzw-portfolio.vercel.app/#'+hash)
       };
   return (
     <div className='relative'>
